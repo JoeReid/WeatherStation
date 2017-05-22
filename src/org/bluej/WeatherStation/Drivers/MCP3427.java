@@ -34,7 +34,8 @@ public class MCP3427 {
      * address (the device can have more than one address), the number of bits to be
      * used (12, 14 or 16) and the gain to be applied to the input (1, 2, 4 or
      * 8) this constructs the device driver.
-     *
+     * @param busNum The number of the I2C Bus.
+     * @param address The address of the device on the bus.
      * @throws IOException If communication on the I2C bus fails.
      */
     public MCP3427(final int busNum, final int address) throws IOException {
@@ -52,7 +53,7 @@ public class MCP3427 {
     /**
      * Read the value of an analogue input. We normalise the value returned so
      * that the actual voltage is the returned value * VREF / 32768.
-     * <br/>
+     * <br>
      * Default method for {@link #read(int, int, int)}:
      * <ul>
      *     <li>Channel = 1</li>

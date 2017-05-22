@@ -19,7 +19,6 @@ public class PiPressureSensor implements PressureSensor {
 
     /**
      * Default constructor.
-     * @throws IOException
      */
     public PiPressureSensor() {
         driver = AirPressureTemperature.getInstance();
